@@ -1,0 +1,31 @@
+{
+  "name":"Ad blocker and skipper",
+  "short_name": "Abs",
+  "description":"^_^",
+  "manifest_version": 2,
+  "version":"0.5.0",
+  "author":"Ayush PS",
+  "content_scripts":[
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js":["skipad.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    } ,
+    {
+      "matches": ["*://*.facebook.com/*", "*://*.facebookcorewwwi.onion/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    } ,
+    {  "matches": ["http://*/*", "https://*/*"],
+      "js":  ["default_filters.js", "block.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "logo.png"
+  },
+ "permissions": ["http://*/*", "https://*/*", "ws://*/*", "wss://*/*", "webRequest", "webRequestBlocking", "storage", "privacy"],
+  "incognito": "spanning"
+}
