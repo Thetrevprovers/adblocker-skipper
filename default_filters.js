@@ -3,6 +3,7 @@ defaultFilters = [
 	"http://www.facebook.com/plugins/likebox.php?*",
 	"*://*.doubleclick.net/*",
 	"*://partner.googleadservices.com/*",
+    "*://googleadservices.com/*",
 	"*://*.googlesyndication.com/*",
 	"*://*.google-analytics.com/*",
 	"*://creative.ak.fbcdn.net/*",

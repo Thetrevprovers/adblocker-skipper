@@ -85,9 +85,6 @@ function enable(icon = true) {
 	}
 
 	blockingEnabled = true;
-	if (icon) {
-		chrome.browserAction.setIcon(enabledImageData);
-	}
 }
 
 // unregister all callbacks
@@ -98,9 +95,6 @@ function disable(icon = true) {
 	}
 
 	blockingEnabled = false;
-	if (icon) {
-		chrome.browserAction.setIcon(disabledImageData);
-	}
 }
 
 // power-cycle
